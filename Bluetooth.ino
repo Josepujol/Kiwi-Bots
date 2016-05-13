@@ -21,44 +21,7 @@ void setup() {
   pinMode(MLeft, OUTPUT);
   pinMode(MRight, OUTPUT);
 }
-void frontwards() {
-  digitalWrite(MRight, HIGH);
-  digitalWrite(MLeft, HIGH);
-  delayMicroseconds(1000);
-  digitalWrite(MRight, LOW);
-  delayMicroseconds(1000);
-  digitalWrite(MLeft, LOW);
-  delayMicroseconds(18000);
-}
-void backward () {
-  digitalWrite(MLeft, HIGH);
-  digitalWrite(MRight, HIGH);
-  delayMicroseconds(1000);
-  digitalWrite(MLeft, LOW);
-  delayMicroseconds(1000);
-  digitalWrite(MRight, LOW);
-  delayMicroseconds(18000);
-}
-void left(){
-  digitalWrite(MLeft, HIGH);
-  digitalWrite(MRight, HIGH);
-  delayMicroseconds(2000);
-  digitalWrite(MLeft, LOW);
-  digitalWrite(MRight, LOW);
-  delayMicroseconds(18000);
-}
-void right(){
-  digitalWrite(MLeft, HIGH);
-  digitalWrite(MRight, HIGH);
-  delayMicroseconds(1000);
-  digitalWrite(MLeft, LOW);
-  digitalWrite(MRight, LOW);
-  delayMicroseconds(19000);
-}
-void stopA() {
-  digitalWrite(MLeft, LOW);
-  digitalWrite(MRight, LOW);
-}
+
 void loop() {
   if (Serial.available() > 0) {
     incomingByte = Serial.read(); // Fijamos la variable incomingByte a lo que lea en el serial
@@ -101,4 +64,42 @@ void loop() {
     digitalWrite(buzzerPin, LOW);
   }
   delay(15);
+}
+void frontwards() {
+  digitalWrite(MRight, HIGH);
+  digitalWrite(MLeft, HIGH);
+  delayMicroseconds(1000);
+  digitalWrite(MRight, LOW);
+  delayMicroseconds(1000);
+  digitalWrite(MLeft, LOW);
+  delayMicroseconds(18000);
+}
+void backward () {
+  digitalWrite(MLeft, HIGH);
+  digitalWrite(MRight, HIGH);
+  delayMicroseconds(1000);
+  digitalWrite(MLeft, LOW);
+  delayMicroseconds(1000);
+  digitalWrite(MRight, LOW);
+  delayMicroseconds(18000);
+}
+void left(){
+  digitalWrite(MLeft, HIGH);
+  digitalWrite(MRight, HIGH);
+  delayMicroseconds(2000);
+  digitalWrite(MLeft, LOW);
+  digitalWrite(MRight, LOW);
+  delayMicroseconds(18000);
+}
+void right(){
+  digitalWrite(MLeft, HIGH);
+  digitalWrite(MRight, HIGH);
+  delayMicroseconds(1000);
+  digitalWrite(MLeft, LOW);
+  digitalWrite(MRight, LOW);
+  delayMicroseconds(19000);
+}
+void stopA() {
+  digitalWrite(MLeft, LOW);
+  digitalWrite(MRight, LOW);
 }
