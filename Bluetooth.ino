@@ -65,22 +65,23 @@ void loop() {
   }
   delay(15);
 }
-void frontwards() {
-  digitalWrite(MRight, HIGH);
+
+void frontwards () {
   digitalWrite(MLeft, HIGH);
-  delayMicroseconds(1000);
-  digitalWrite(MRight, LOW);
+  digitalWrite(MRight, HIGH);
   delayMicroseconds(1000);
   digitalWrite(MLeft, LOW);
+  delayMicroseconds(1000);
+  digitalWrite(MRight, LOW);
   delayMicroseconds(18000);
 }
-void backward () {
-  digitalWrite(MLeft, HIGH);
+void backward() {
   digitalWrite(MRight, HIGH);
-  delayMicroseconds(1000);
-  digitalWrite(MLeft, LOW);
+  digitalWrite(MLeft, HIGH);
   delayMicroseconds(1000);
   digitalWrite(MRight, LOW);
+  delayMicroseconds(1000);
+  digitalWrite(MLeft, LOW);
   delayMicroseconds(18000);
 }
 void left(){
