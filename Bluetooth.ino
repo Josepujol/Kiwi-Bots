@@ -6,6 +6,7 @@
   H enciende LEDs, L apaga LEDs; Z zumbador; z apaga el zumbador
   Desarrollado por Miguel Granero, Jose Pujol y Alberto Pumar.
   Revisado Mayo 2016
+  APP: https://play.google.com/store/apps/details?id=appinventor.ai_albyuda.HC06
 */
 
 // LEDS
